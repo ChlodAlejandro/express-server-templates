@@ -1,0 +1,31 @@
+{
+  "name": "bare-express-server",
+  "version": "1.0.0",
+  "description": "A bare Express server template.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChlodAlejandro/express-server-templates.git"
+  },
+  "keywords": [
+    "express",
+    "web-server",
+    "templates"
+  ],
+  "author": "Chlod Alejandro",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ChlodAlejandro/express-server-templates/issues"
+  },
+  "homepage": "https://github.com/ChlodAlejandro/express-server-templates#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "express-useragent": "^1.0.13",
+    "fs-jetpack": "^2.3.0",
+    "log-timestamp": "^0.3.0"
+  }
+}

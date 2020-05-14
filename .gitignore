@@ -1,0 +1,11 @@
+# node modules
+*/node_modules
+
+# logs
+*/logs
+
+# ssl certificates
+*/ssl
+
+# modular server. i'm still doing this so please don't yet.
+modular/
