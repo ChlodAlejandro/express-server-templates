@@ -15,10 +15,11 @@ function getSettings(key, secondary = undefined) {
 
 const SERVER_ROOT = path.resolve(getSettings("app.root", path.join(__dirname, "..", "..")));
 
-const supposedAppRoot = getSettings("app.app_files", "./app");
+var supposedAppRoot = getSettings("app.app_files", "./app");
 if (supposedAppRoot.startsWith("./"))
     supposedAppRoot = supposedAppRoot.length > 2 ?
-        path.join(APP_ROOT, supposedAppRoot.substring(2)) : APP_ROOT
+        path.join(SERVER_ROOT, supposedAppRoot.substring(2)) : SERVER_ROOT
+        
 const APP_ROOT = path.resolve(supposedAppRoot);
 
 const constants = {

@@ -11,7 +11,7 @@ module.exports = new Module(
     },
     "^/$",
     {
-        processWebRequest: async (log, req, res, managers, server) => {
+        processWebRequest: async ({res}) => {
             res.set("Content-Type", "text/plain");
           
             res.send(

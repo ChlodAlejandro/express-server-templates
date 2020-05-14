@@ -11,7 +11,7 @@ module.exports = new Module(
     },
     "/?test",
     {
-        processWebRequest: async (log, req, res) => {
+        processWebRequest: async ({req, res}) => {
             res.set("Content-Type", "application/json");
           
             res.send(JSON.stringify({
