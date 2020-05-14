@@ -10,7 +10,7 @@ To use an installation, clone this repository (or download a template from the r
 The templates in this repository are as follows:
 
 * **Bare** - A bare Express server, with very basic configuration and error handling. All requests run through a single script, `request.js`.
-* **Modular** *(under construction)* - An object-oriented Express server, which automatically loads every file in the `modules` directory. Each module is a `Module` object. An additional object, `Manager`, exists for managing server processes between modules, or for basic server maintenance. Unlike `Module`s, which are instantiated, `Manager`s must be inherited instead.
+* **Modular** - An object-oriented Express server, which automatically loads every file in the `modules` directory. Each module is a `Module` object. An additional object, `Manager`, exists for managing server processes between modules, or for basic server maintenance. Unlike `Module`s, which are instantiated, `Manager`s must be inherited instead.
 
 For development servers, you may wish to run the servers with [`forever`](https://www.npmjs.com/package/forever) instead, so that the server is reloaded as soon as you change a file.
 
