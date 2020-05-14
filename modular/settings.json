@@ -1,0 +1,13 @@
+{
+    "about": {
+        "name": "modular-express-server",
+        "displayName": "Modular Express Server",
+        "description": "A simple, object-oriented Node.js Express server that runs on Modules.",
+        "version": "1.0.0",
+        "contact": "webmaster@example.com"
+    },
+    "server": {
+        "mode": "HTTP_ONLY",
+        "port": 80
+    }
+}

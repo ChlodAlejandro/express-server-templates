@@ -4,13 +4,14 @@ The bare server is a simple web server with extremely basic error handling.
 To use the bare server, run `npm start` or `node src/server.js` in this directory.
 
 ## Usage
+Don't forget to download dependencies first using `npm i`.
 
 Run the server with `npm start` or `node src/server.js` in this directory.
 
 To modify the output, change the function inside of `request.js`. Please make sure that this file exports an asynchronus function that takes in an Express `req` (request) and `res` (response), or else the server will automatically close the connection without sending data.
 
 ## `settings.json`
-You may slightly configure your installation of the bare server. If you'd like to run on all defaults, you can choose to keep `settings.json` as is, or delete the file entirely. 
+You may slightly configure your installation of the bare server. If you'd like to run on all defaults, you can choose to keep `settings.json` as is, remove all keys from `settings.json`, or delete the file entirely. 
 
 The possible configurations are shown below.
 ```js
@@ -18,7 +19,6 @@ The possible configurations are shown below.
     // The location of the web server. This should be the directory that contains
     // `src`, not `src` itself.
     "app_root": "/var/web/bare",
-
 
     // The port to use for the web server. On Linux, root is required for any port
     // from 1024 and below.
