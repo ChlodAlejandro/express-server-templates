@@ -58,7 +58,7 @@ The possible configurations are shown below.
         "name": "modular-express-server",
 
         // The display name of the server. This will be shown to users.
-        "displayName": "Modular Express Server",
+        "display_name": "Modular Express Server",
 
         // The description of the server. Treat this like the description of the project
         // in `package.json`.
