@@ -45,16 +45,24 @@ goto CHANGES_NEXT_STEP
 
 :CHANGES_DROP
 echo Dropping to the command prompt... (run "exit" when you're done)
-cmd /K "prompt (express-server-templates) %CD%$G "
+cmd
 goto CHANGES_NEXT_STEP
 
 :TAG
-echo This version should be tagged as? (type nothing to skip)
+echo This version should be tagged as? (type nothing to skip git tagging)
 set /p EST_VERSION="(x.x.x): "
+
+if [%EST_VERSION%]==[] goto ZIP_VERSION
 
 echo.
 git tag %EST_VERSION%
 echo.
+
+goto ZIP
+
+:ZIP_VERSION
+echo What should be the version for the built files?
+set /p EST_VERSION="(x.x.x): "
 
 :ZIP
 echo Clearing out the unnecessary files...
@@ -69,9 +77,10 @@ echo Zipping...
 
 echo.
 cd bare
-7z a -tzip "../express-server-templates--bare-%EST_VERSION%.zip" *
+7z a -tzip "../build/express-server-templates--bare-%EST_VERSION%.zip" *
 cd ../modular
-7z a -tzip "../express-server-templates--modular-%EST_VERSION%.zip" *
+7z a -tzip "../build/express-server-templates--modular-%EST_VERSION%.zip" *
+cd ..
 echo.
 
 echo Zipping complete. Restoring files...
@@ -83,6 +92,11 @@ move build/bare_logs bare/logs > NUL
 move build/modular_logs modular/logs > NUL
 
 echo Opening output folder...
+cd build
+start .
+
+echo All done. 
+pause
 
 :EXIT
-echo All done. Exiting...
+echo Exiting...
