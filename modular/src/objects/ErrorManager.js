@@ -44,9 +44,14 @@ module.exports = class ErrorManager extends Manager {
         html += "</head>";
         html += "<body>";
         html += `<h1>${errorDetails}</h1>`;
-        html += `<p>${Constants.About.displayName} v${Constants.About.version}<br/>`;
-        html += `For more info, contact the webmaster at <a href="mailto:${Constants.About.contact}">`
-        html += `${Constants.About.contact}</a></p>`;
+        html += `<p>${Constants.About.displayName} v${Constants.About.version}`;
+        
+        if (Constants.About.contact) {
+            html += `<br/>For more info, contact the webmaster at <a href="mailto:${Constants.About.contact}">`
+            html += `${Constants.About.contact}</a>`;
+        }
+        
+        html += "</p>";
         html += "</body>";
         html += "</html>";
 

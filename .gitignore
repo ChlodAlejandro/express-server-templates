@@ -6,3 +6,7 @@ logs/
 
 # ssl certificates
 ssl/
+
+# built packages
+build/
+express-server-template*.zip

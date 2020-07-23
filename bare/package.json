@@ -21,6 +21,9 @@
     "url": "https://github.com/ChlodAlejandro/express-server-templates/issues"
   },
   "homepage": "https://github.com/ChlodAlejandro/express-server-templates#readme",
+  "engines": {
+    "node": "12.x"
+  },
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",

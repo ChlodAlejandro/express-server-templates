@@ -32,7 +32,7 @@ const constants = {
         displayName: getSettings("about.display_name", "Modular Express Server"),
         description: getSettings("about.description", "A simple Node.js Express server that runs on modules."),
         version: getSettings("about.version", "0.0.0"),
-        contact: getSettings("about.contact", "webmaster@example.com")
+        contact: getSettings("about.contact", false)
     },
     Server: {
         mode: getSettings("server.mode", "HTTP_ONLY"),

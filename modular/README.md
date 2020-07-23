@@ -67,8 +67,7 @@ The possible configurations are shown below.
         // The version of the server.
         "version": "1.0.0",
 
-        // The primary contact of the server. This should be an email. If not, you should modify
-        // ErrorManager.
+        // The primary contact of the server. This should be an email, or false.
         "contact": "webmaster@example.com"
 
     },
