@@ -55,7 +55,7 @@ set /p EST_VERSION="(x.x.x): "
 if [%EST_VERSION%]==[] goto ZIP_VERSION
 
 echo.
-git tag %EST_VERSION%
+git tag v%EST_VERSION%
 echo.
 
 goto ZIP
