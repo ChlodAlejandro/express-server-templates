@@ -45,7 +45,7 @@ goto CHANGES_NEXT_STEP
 
 :CHANGES_DROP
 echo Dropping to the command prompt... (run "exit" when you're done)
-cmd
+cmd /K "echo."
 goto CHANGES_NEXT_STEP
 
 :TAG
@@ -67,29 +67,29 @@ set /p EST_VERSION="(x.x.x): "
 :ZIP
 echo Clearing out the unnecessary files...
 
-mkdir build > NUL
-move bare/node_modules build/bare_node_modules > NUL
-move modular/node_modules build/modular_node_modules > NUL
-move bare/logs build/bare_logs > NUL
-move modular/logs build/modular_logs > NUL
+mkdir build > NUL 2>&1
+move bare/node_modules build/bare_node_modules > NUL 2>&1
+move modular/node_modules build/modular_node_modules > NUL 2>&1
+move bare/logs build/bare_logs > NUL 2>&1
+move modular/logs build/modular_logs > NUL 2>&1
 
 echo Zipping...
 
 echo.
 cd bare
-7z a -tzip "../build/express-server-templates--bare-%EST_VERSION%.zip" *
+7z a -tzip "../build/express-server-templates--bare-%EST_VERSION%.zip" * > NUL 2>&1
 cd ../modular
-7z a -tzip "../build/express-server-templates--modular-%EST_VERSION%.zip" *
+7z a -tzip "../build/express-server-templates--modular-%EST_VERSION%.zip" * > NUL 2>&1
 cd ..
 echo.
 
 echo Zipping complete. Restoring files...
 
-mkdir build > NUL
-move build/bare_node_modules bare/node_modules > NUL
-move build/modular_node_modules modular/node_modules > NUL
-move build/bare_logs bare/logs > NUL
-move build/modular_logs modular/logs > NUL
+mkdir build > NUL 2>&1
+move build/bare_node_modules bare/node_modules > NUL 2>&1
+move build/modular_node_modules modular/node_modules > NUL 2>&1
+move build/bare_logs bare/logs > NUL 2>&1
+move build/modular_logs modular/logs > NUL 2>&1
 
 echo Opening output folder...
 cd build
